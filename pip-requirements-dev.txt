@@ -2,6 +2,7 @@ black
 flake8
 isort
 bandit
+mypy
 ipython
 ipdb
 pytest
