@@ -1,0 +1,62 @@
+" powerline for vim
+" set rtp+=/xxx/.local/lib/python3.6/site-packages/powerline/bindings/vim/
+
+" pathogen for vim
+execute pathogen#infect()
+
+set laststatus=2
+set t_Co=256
+
+syntax on
+set encoding=utf-8
+set ruler " show line and column number
+set showcmd " show (partial) command in status line
+set number relativenumber " Line numbers
+set cursorline " Color the cursorline
+set autoindent " Auto indenting
+set smartindent " Auto indenting
+set incsearch " search as characters are entered
+set hlsearch " highlight matches
+set backspace=indent,eol,start
+set colorcolumn=89
+highlight ColorColumn ctermbg=darkgray
+
+" indent settings
+filetype plugin indent on " with this setting, we dont need to set ts, sts, sw
+" set ts=4 " tabstop, ts : when Vim encounters a tabulation in a file you're opening, it displays the tab as {ts} space
+
+" set sts=4 " softtabstop, sts : when you're editing a file and press the tab key, Vim uses this setting to define the width of the inserted tabulation
+
+" set sw=4 " shiftwidth, sw : the number of spaces Vim uses when indenting, either using autoindent stuff or the usual >>, << commands
+
+set et " expand tabs to spaces
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab " vim use tab (8 spaces) for YAML files by defaut
+
+" python for vim
+" et python_highlight_all=1
+
+" syntastic for vim
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+
+" youcompleteme alias
+" noremap <f12> :YcmCompleter GoTo<CR>
+" ctrl-o in insert mode swihttps://raw.githubusercontent.com/Gowa2017/Gowa2017.github.io/master/Vim/YouCompleteMe-readme_zh.htmltches temporarily to normal mode
+" inoremap <f12> <c-o>:YcmCompleter GoTo<CR>
+
+" alias f8 to :w for save cache
+noremap <f8> :w<return>
+inoremap <f8> <c-o>:w<return>
+
+# alias f9 for Visual Block mode
+noremap <f9> <c-v><return>
+inoremap <f9> <c-o><c+v><return>
+
+# alias f10 for save and exit
+noremap <f10> :x!<return>
+inoremap <f10> <c-o>:x!<return>
