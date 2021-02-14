@@ -1,0 +1,6 @@
+/* ~/.sqliterc */
+/* http://zetcode.com/db/sqlite/tool/ */
+.mode column
+.headers on
+.nullvalue NULL
+.timer on
