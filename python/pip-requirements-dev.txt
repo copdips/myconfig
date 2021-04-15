@@ -14,4 +14,4 @@ pip-tools
 pipdeptree
 
 # https://www.python.org/dev/peps/pep-0508/#environment-markers
-pythondotenv; platform_system != "Windows"
+python-dotenv; platform_system != "Windows"
