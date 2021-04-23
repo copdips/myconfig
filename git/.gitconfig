@@ -11,6 +11,8 @@
 	df = diff
 	br = branch
 	cm = checkout master
+	rom = pull -r origin master
+	rou = pull -r origin upstream
 [color]
 	ui = auto
 [core]
